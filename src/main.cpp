@@ -33,7 +33,7 @@ static float UserInput(const std::string name){
     while (value < 0 || value > 100){
         std::cout << "Input" << name << "in range of 0 to 100";
         std::cin >> input;
-        value = std::stoi(input)
+        value = std::stoi(input);
     }
 }
 
