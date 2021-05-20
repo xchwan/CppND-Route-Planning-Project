@@ -78,9 +78,9 @@ void RoutePlanner::AStarSearch() {
     
     start_node->visited = true;
     open_list.push_back(start_node);
-    while (open_list.size() > 0) {
+    while (!open_list.empty()) {
         current_node = NextNode();
-        if (current_node->distance(*end_node) == 0) {
+        if (current_node == end_node) {
             m_Model.path = ConstructFinalPath(current_node);
             return;
         } else {
